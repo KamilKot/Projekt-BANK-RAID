@@ -28,8 +28,10 @@ int main(int argc, char const *argv[])
  	
  	{ //Zaczynamy symulacje calego procesu napadu
  		cout<<"Złodzieje wchodzą do banku"<<endl;
-	if ((clients[0].dexterity() && clients[1].dexterity()) >= 100)
- 		 cout<<"Napad nie udany, klienci uciekli i powiadomili policję"<<endl;
+	if ( (clients[0].dexterity() + clients[1].dexterity() ) >= 160)
+ 		{cout<<"Napad nie udany, klienci uciekli i powiadomili policję"<<endl;
+ 		break; }
+
  	else
  	cout<<"Napad trwa "<<endl;
  	
